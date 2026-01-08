@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "@/assets/sougandhika-logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,12 +18,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 border-2 border-primary flex items-center justify-center">
-              <span className="font-display text-xl text-primary">S</span>
-            </div>
-            <span className="font-display text-lg tracking-ultrawide text-foreground group-hover:text-primary transition-colors">
-              SOUGANDHIKA
-            </span>
+            <img 
+              src={logo} 
+              alt="SOUGANDHIKA STUDIOS Logo" 
+              className="w-32 h-32 object-contain"
+            />
           </a>
 
           {/* Navigation Links */}

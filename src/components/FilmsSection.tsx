@@ -1,47 +1,32 @@
 import FilmCard from "./FilmCard";
-import poster1 from "@/assets/poster-1.jpg";
 import poster2 from "@/assets/poster-2.jpg";
 import poster3 from "@/assets/poster-3.jpg";
 import poster4 from "@/assets/poster-4.jpg";
-
-// Placeholder for the 5th film - can be replaced later
-const poster5 = poster1; // Temporary placeholder
+import sadisticBackground from "@/assets/sadistic-background.png";
+import anirikshitaBackground from "@/assets/anirikshita-background.png";
+import hariyoPhiriyoBackground from "@/assets/hariyo-phiriyo-background.png";
 
 const films = [
   {
-    title: "THE END OF THE WORLD",
-    year: "2024",
+    title: "HARIYO PHIRIYO",
+    year: "2023",
     genre: "Short Film",
-    image: poster1,
-    youtubeLink: "https://youtu.be/LgwcB8B9D74?si=9Cv5pvJL38DnxLRB",
-  },
-  {
-    title: "HARIYO",
-    year: "2024",
-    genre: "Short Film",
-    image: poster2,
+    image: hariyoPhiriyoBackground,
     youtubeLink: "https://youtube.com/shorts/ddV6BSGbRs4?si=z1-Qub7QOXgAiWKm",
   },
   {
-    title: "SADISTIC",
-    year: "2023",
-    genre: "Short Film",
-    image: poster3,
-    youtubeLink: "https://youtu.be/gQK5Mq-0NkM?si=bCFLLE0oZ6i5hZJs",
-  },
-  {
     title: "ANIRIKSHITA",
-    year: "2023",
+    year: "2022",
     genre: "Short Film",
-    image: poster4,
+    image: anirikshitaBackground,
     youtubeLink: "https://youtu.be/vM0Ynao1NoE?si=eTOq0AEWQZya6dzp",
   },
   {
-    title: "GIPA",
-    year: "2024",
-    genre: "Coming Soon",
-    image: poster5, // Replace this image manually later
-    youtubeLink: undefined, // No YouTube link yet
+    title: "SADISTIC",
+    year: "2022",
+    genre: "Short Film",
+    image: sadisticBackground,
+    youtubeLink: "https://youtu.be/gQK5Mq-0NkM?si=bCFLLE0oZ6i5hZJs",
   },
 ];
 
@@ -59,8 +44,8 @@ const FilmsSection = () => {
           </h2>
         </div>
         
-        {/* Films Grid - 5 columns on large screens */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6">
+        {/* Films Grid - 3 columns on large screens */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {films.map((film, index) => (
             <FilmCard
               key={film.title}

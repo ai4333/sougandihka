@@ -1,4 +1,4 @@
-import upcomingPlaceholder from "@/assets/upcoming-placeholder.jpg";
+import upcomingPoster from "@/assets/the-end-of-the-start.png";
 
 const UpcomingMoviesSection = () => {
   return (
@@ -25,8 +25,8 @@ const UpcomingMoviesSection = () => {
             {/* Image Container */}
             <div className="relative aspect-[21/9] overflow-hidden border border-silver-muted/20">
               <img
-                src={upcomingPlaceholder}
-                alt="Upcoming Movie"
+                src={upcomingPoster}
+                alt="The End of the Start - Upcoming Movie"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               
