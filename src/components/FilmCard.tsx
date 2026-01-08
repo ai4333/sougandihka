@@ -3,12 +3,30 @@ interface FilmCardProps {
   year: string;
   genre: string;
   image: string;
+  youtubeLink?: string;
   delay?: string;
 }
 
-const FilmCard = ({ title, year, genre, image, delay = "" }: FilmCardProps) => {
+const FilmCard = ({ title, year, genre, image, youtubeLink, delay = "" }: FilmCardProps) => {
+  const handleClick = () => {
+    if (youtubeLink) {
+      window.open(youtubeLink, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
-    <div className={`poster-card group cursor-pointer fade-in-up ${delay}`}>
+    <div 
+      className={`poster-card group ${youtubeLink ? 'cursor-pointer' : ''} fade-in-up ${delay}`}
+      onClick={handleClick}
+      role={youtubeLink ? "link" : undefined}
+      tabIndex={youtubeLink ? 0 : undefined}
+      onKeyDown={(e) => {
+        if (youtubeLink && (e.key === 'Enter' || e.key === ' ')) {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
+    >
       {/* Image */}
       <div className="aspect-[2/3] overflow-hidden">
         <img
@@ -34,6 +52,16 @@ const FilmCard = ({ title, year, genre, image, delay = "" }: FilmCardProps) => {
         <p className="font-body text-sm text-muted-foreground tracking-wide">
           {genre}
         </p>
+        
+        {/* Watch indicator */}
+        {youtubeLink && (
+          <div className="mt-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <span className="font-body text-xs tracking-widest text-primary uppercase">Watch Now</span>
+          </div>
+        )}
       </div>
       
       {/* Hover Red Glow */}

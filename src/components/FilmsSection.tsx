@@ -4,30 +4,44 @@ import poster2 from "@/assets/poster-2.jpg";
 import poster3 from "@/assets/poster-3.jpg";
 import poster4 from "@/assets/poster-4.jpg";
 
+// Placeholder for the 5th film - can be replaced later
+const poster5 = poster1; // Temporary placeholder
+
 const films = [
   {
-    title: "BLOOD OATH",
+    title: "THE END OF THE WORLD",
     year: "2024",
-    genre: "Crime Thriller",
+    genre: "Short Film",
     image: poster1,
+    youtubeLink: "https://youtu.be/LgwcB8B9D74?si=9Cv5pvJL38DnxLRB",
   },
   {
-    title: "CRIMSON RAIN",
+    title: "HARIYO",
     year: "2024",
-    genre: "Neo-Noir Drama",
+    genre: "Short Film",
     image: poster2,
+    youtubeLink: "https://youtube.com/shorts/ddV6BSGbRs4?si=z1-Qub7QOXgAiWKm",
   },
   {
-    title: "THE SYNDICATE",
+    title: "SADISTIC",
     year: "2023",
-    genre: "Heist Action",
+    genre: "Short Film",
     image: poster3,
+    youtubeLink: "https://youtu.be/gQK5Mq-0NkM?si=bCFLLE0oZ6i5hZJs",
   },
   {
-    title: "LAST SHADOWS",
+    title: "ANIRIKSHITA",
     year: "2023",
-    genre: "Revenge Thriller",
+    genre: "Short Film",
     image: poster4,
+    youtubeLink: "https://youtu.be/vM0Ynao1NoE?si=eTOq0AEWQZya6dzp",
+  },
+  {
+    title: "GIPA",
+    year: "2024",
+    genre: "Coming Soon",
+    image: poster5, // Replace this image manually later
+    youtubeLink: undefined, // No YouTube link yet
   },
 ];
 
@@ -45,8 +59,8 @@ const FilmsSection = () => {
           </h2>
         </div>
         
-        {/* Films Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {/* Films Grid - 5 columns on large screens */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6">
           {films.map((film, index) => (
             <FilmCard
               key={film.title}
@@ -56,22 +70,11 @@ const FilmsSection = () => {
           ))}
         </div>
         
-        {/* View All Link */}
-        <div className="mt-16 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 font-body text-sm tracking-widest text-muted-foreground hover:text-foreground transition-colors group"
-          >
-            VIEW ALL PROJECTS
-            <svg 
-              className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+        {/* Note about clicking films */}
+        <div className="mt-12 text-center">
+          <p className="font-body text-sm text-muted-foreground tracking-wide">
+            Click on any poster to watch the film
+          </p>
         </div>
       </div>
     </section>

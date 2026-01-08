@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import FilmsSection from "@/components/FilmsSection";
 import TrailerSection from "@/components/TrailerSection";
+import FilmsSection from "@/components/FilmsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -18,11 +18,11 @@ const Index = () => {
       {/* Hero Section */}
       <Hero />
       
+      {/* Trailer Section - Prominent position */}
+      <TrailerSection />
+      
       {/* Films Section */}
       <FilmsSection />
-      
-      {/* Trailer Section */}
-      <TrailerSection />
       
       {/* About Section */}
       <AboutSection />
