@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import UpcomingMoviesSection from "@/components/UpcomingMoviesSection";
 import TrailerSection from "@/components/TrailerSection";
 import FilmsSection from "@/components/FilmsSection";
 import AboutSection from "@/components/AboutSection";
@@ -17,6 +18,9 @@ const Index = () => {
       
       {/* Hero Section */}
       <Hero />
+      
+      {/* Upcoming Movies Section */}
+      <UpcomingMoviesSection />
       
       {/* Trailer Section - Prominent position */}
       <TrailerSection />
