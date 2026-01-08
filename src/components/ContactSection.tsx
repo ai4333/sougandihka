@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Instagram } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -27,28 +28,29 @@ const ContactSection = () => {
             </p>
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground mb-8">
               LET'S CREATE
-              <span className="block text-primary">SOMETHING DARK</span>
+              <span className="block text-primary">SOMETHING EPIC</span>
             </h2>
             
             <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-md">
               Have a story that needs to be told? A vision that demands to be seen? 
-              We're listening.
+              Join the Yashaverse.
             </p>
             
             {/* Contact Info */}
             <div className="mt-12 space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-px bg-primary" />
-                <span className="font-body text-sm text-silver-muted tracking-wide">
-                  contact@noirfilms.com
+              <a
+                href="https://www.instagram.com/sougandhika_studios?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-10 h-10 border border-primary/50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <Instagram className="w-5 h-5 text-primary" />
+                </div>
+                <span className="font-body text-sm text-silver-muted tracking-wide group-hover:text-foreground transition-colors">
+                  @sougandhika_studios
                 </span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-px bg-primary" />
-                <span className="font-body text-sm text-silver-muted tracking-wide">
-                  Los Angeles, CA
-                </span>
-              </div>
+              </a>
             </div>
           </div>
           

@@ -26,24 +26,24 @@ const Hero = () => {
           </p>
           
           {/* Main Title */}
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-foreground text-cinematic mb-8 fade-in-up delay-200">
-            WHERE SHADOWS
-            <span className="block text-primary">TELL STORIES</span>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground text-cinematic mb-8 fade-in-up delay-200">
+            SOUGANDHIKA
+            <span className="block text-primary">STUDIOS</span>
           </h1>
           
           {/* Subtitle */}
           <p className="font-body text-lg md:text-xl text-silver-muted max-w-xl mx-auto mb-12 fade-in-up delay-400">
-            Crafting cinematic experiences that haunt the soul and grip the heart.
+            Where stories become legends. Crafting cinematic experiences from the Yashaverse.
           </p>
           
           {/* CTA */}
           <div className="fade-in-up delay-600">
             <a
-              href="#films"
+              href="#trailers"
               className="inline-flex items-center gap-4 px-8 py-4 border border-primary/50 hover:border-primary hover:bg-primary/10 transition-all duration-500 group"
             >
               <span className="font-display text-lg tracking-ultrawide text-foreground">
-                EXPLORE FILMS
+                WATCH TRAILER
               </span>
               <svg 
                 className="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform" 
